@@ -1,0 +1,3 @@
+*{padding: 0;margin: 0;}
+.div1{height: 300px;border:1px solid #fff; float: right; background: #aaa;clear: both;}
+.div2{height: 300px;border:1px solid #fff; background: #aaa;float: right;clear: both;}
