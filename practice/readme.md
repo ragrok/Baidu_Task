@@ -10,3 +10,6 @@
 5.清楚浮动的两种方法：
 5.1clear属性，常用clear：both，或者clear：right，clear：left。
 5.2width：100%+overflow：hidden。
+
+#### 定位
+1.绝对定位：会脱离标准文档流，始终保持在元素的初始位置。
