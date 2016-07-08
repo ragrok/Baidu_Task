@@ -8,3 +8,8 @@
 1.html基础语法
 2.css基础语法
 3.javascript基础语法
+
+#### 清除浮动的三种方法
+1.使用clear：both <br/>
+2.使用overflow：hidden或者auto.
+3.使用clearfix
