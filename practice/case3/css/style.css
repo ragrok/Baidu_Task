@@ -1,7 +1,0 @@
-*{margin: 0;padding: 0}
-.warp{width: 960;margin: 0 auto;}
-.header{width: 100%;background: #fff;}
-.mainbody{width: 100%;background: #000;overflow: hidden;}
-.footer{width: 100%;background: #ccc;}
-.left_body{width: 800px;height:200px;background: #dcd;float: left;}
-.right_body{width: 140px;height: 500px;background: #eea;float:right;}

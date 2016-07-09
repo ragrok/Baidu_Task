@@ -1,0 +1,25 @@
+div {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    margin: 100px;
+    background-color: red;
+}
+.circle{
+  border-radius: 50%;
+}
+.semi-circle{
+  border-radius: 100px 100px 0 0;
+  height: 50px;
+}
+.sector{
+  border-radius: 100px 0 0;
+}
+.arc{
+  border-radius: 100px 0;
+  -webkit-transform：rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}

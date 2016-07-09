@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> 左右固定，中间自适应 </title>
+<style type="text/css">
+html,body{margin:0; padding: 0;}
+.left{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 200px;
+  height: 100px;
+  background: #000;
+  border: 1px solid red;
+}
+.right{
+  position: absolute;
+  top: 10px;
+  background: #aac;
+  right: 10px;
+  width: 200px;
+  height: 100px;
+  border: 1px solid red;
+}
+.center{
+  margin: 10px 240px;
+  background-color: #fc0;
+  border: 1px solid red;
+}
+/*.center { margin: 0 210px; background-color: #666;}*/
+</style>
+</head>
+<body>
+<div class="left">左</div>
+<div class="right">右</div>
+<div class="center">中</div>
+</body>
+</html>
