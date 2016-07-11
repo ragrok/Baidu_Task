@@ -68,3 +68,18 @@ footer span{
   margin: 0;
   padding: 0;
 }
+.input_message{
+   width: 30%;
+   text-align: right;
+   margin-right: 20px;
+   margin-top: 10px;
+   vertical-align: top;
+   margin-bottom: 0;
+   display: inline-block;
+}
+.airticle_1,.airticle_2,.airticle_3,.airticle_4{
+  background: #fff;
+  box-shadow: 2px 2px 2px #848484;
+  margin: 30px;
+  margin-right: 450px;
+}
