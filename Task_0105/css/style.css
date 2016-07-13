@@ -52,8 +52,62 @@ aside{
   padding: 20px;
   box-shadow: 2px 2px 2px #848484;
 }
+article{
+  margin-top: 40px;
+  background-color: #fff;
+  margin-left: 40px;
+  margin-right: 50px;
+  padding: 20px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  box-shadow: 2px 2px 2px #848484;
+}
+.color_gray{
+  color: gray;
+}
+.text_indent{
+  text-indent: 2em;
+}
+.no_list{
+  list-style: none;
+}
+figure{
+  width: 166px;
+  height: 166px;
+  display: inline-block;
+  border: 1px solid #aaa;
+  text-align: center;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+figure img{
+   width: 70%;
+ }
 form>div{
   margin: 10px 0;
+}
+table{
+  width: 100%;
+  margin: 0 auto;
+}
+.bot{
+  float: right;
+}
+thead{
+  background: #333;
+}
+tfoot{
+  background: #ccc;
+}
+input[type='submit']{
+   width: 100%;
+   color: #aac;
+   height: 40px;
+   margin: 5px;
+   border-radius: 8px;
+   border: 1px solid #3355D0;
+   font-weight: 800;
+   padding: 0;
 }
 .footer{
   height: 60px;
@@ -72,7 +126,7 @@ footer span{
    width: 30%;
    text-align: right;
    margin-right: 20px;
-   margin-top: 10px;
+   margin-top: 20px;
    vertical-align: top;
    margin-bottom: 0;
    display: inline-block;
@@ -82,4 +136,12 @@ footer span{
   box-shadow: 2px 2px 2px #848484;
   margin: 30px;
   margin-right: 450px;
+}
+.name{
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+ol>li{
+  font-weight: bold;
 }
