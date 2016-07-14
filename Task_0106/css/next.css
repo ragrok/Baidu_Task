@@ -1,0 +1,20 @@
+p{
+    font-style: italic;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 30px;
+    font-family: monospace;
+}
+p.first strong{
+    color: #3355D0;
+    font-size: 50px;
+}
+p.second strong{
+    color: #ffcc00;
+    font-size: 30px;
+    background: rebeccapurple;
+    background-color: #aaaacc;
+}
+p.second strong:before{
+    content: "Reference";
+}
