@@ -22,3 +22,8 @@
   margin: 0 auto;
   background-color: #faaafa;
 }
+.left_content::first-letter{
+  font-size: 300%;
+  color: yellow;
+  padding: 10px;
+}
