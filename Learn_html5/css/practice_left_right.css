@@ -1,0 +1,15 @@
+.bottom{
+    display: inline-block;
+}
+.left_bottom{
+    width: 490px;
+    float: left;
+    position: relative;
+    margin: 10px;
+}
+.right_bottom{
+    float: right;
+    position: relative;
+    margin: 10px;
+    width: 458px;
+}
