@@ -58,17 +58,27 @@ header{
   position: absolute;
 }
 .middle_article{
-  width: 890px;
-  overflow: auto;
+  display: inline-block;
+  width: 880px;
 }
-.le .mi .li{
-   display: inline-block;
-   width: 210px;
-   height: 100px;
+.first_article,.second_article,.third_article{
+  display: inline-block;
+  width: 220px;
 }
-.when .how .what{
+.first_article{
+  color: #d45d5c;
+}
+.second_article{
+  color: #3355D0;
+}
+.third_article{
+  color: #ffcc00;
+}
+.what, .when, .how{
    height: 28px;
+   font-family: "sans-serif";
+   font-size: 32px;
+   color: #3355D0;
+   margin-bottom: 20px;
 }
-.le>p .mi>p .li>p{
 
-}

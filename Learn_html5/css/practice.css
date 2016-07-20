@@ -1,0 +1,24 @@
+.main{
+    width: 800px;
+    height: 210px;
+    margin: 0 auto;
+}
+.middle_article{
+    display: inline-block;
+}
+.first_article{
+    display: inline-block;
+    color: #d45d5c;
+    position: relative;
+    width: 200px;
+}
+.second_article{
+    display: inline-block;
+    color: #3355D0;
+    width: 200px;
+}
+.third_article{
+    display: inline-block;
+    color: #ffcc00;
+    width: 200px;
+}
