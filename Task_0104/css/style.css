@@ -16,10 +16,3 @@ div {
 .sector{
   border-radius: 100px 0 0;
 }
-.arc{
-  border-radius: 100px 0;
-  -webkit-transform：rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
