@@ -15,7 +15,7 @@ header{
 }
 .left_header{
   font-size: 12px;
-  background: #375;
+  background: #d45d5c;
   font-family: "黑体";
   width: 110px;
   height: 61px;
@@ -64,6 +64,7 @@ header{
 .first_article,.second_article,.third_article{
   display: inline-block;
   width: 220px;
+  margin-left: 30px;
 }
 .first_article{
   color: #d45d5c;
@@ -81,4 +82,31 @@ header{
    color: #3355D0;
    margin-bottom: 20px;
 }
+<<<<<<< HEAD
+=======
+.bottom{
+  display: inline-block;
+}
+.left_bottom{
+  width: 450px;
+  float: left;
+  position: relative;
+  margin: 10px;
+}
+.right_bottom{
+  float: right;
+  position: relative;
+  margin: 10px;
+  width: 450px;
+}
+.bottom_img img{
 
+  width: 458px;
+  height: 275px;
+}
+.left_content img{
+  width: 60px;
+  height: 150px;
+  margin: 10px;
+}
+>>>>>>> f9fe6ca5a48f79d2368c0681ec3cb81881f27869

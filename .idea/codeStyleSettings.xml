@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ProjectCodeStyleSettingsManager">
     <option name="PER_PROJECT_SETTINGS">
-      <value />
+      <value>
+        <XML>
+          <option name="XML_LEGACY_SETTINGS_IMPORTED" value="true" />
+        </XML>
+      </value>
     </option>
-    <option name="PREFERRED_PROJECT_CODE_STYLE" value="Default (1)" />
+<<<<<<< HEAD
+    <option name="PREFERRED_PROJECT_CODE_STYLE" value="Default" />
+=======
+    <option name="USE_PER_PROJECT_SETTINGS" value="true" />
+>>>>>>> f9fe6ca5a48f79d2368c0681ec3cb81881f27869
   </component>
 </project>
