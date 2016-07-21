@@ -1,0 +1,65 @@
+<!--<style>
+*{border:1px solid #eee;}
+body{
+border-color:#09f;
+}
+ul{list-style:none;width:800px;height:600px;margin:0 auto;padding:10px;}
+li{float:left;}
+#li1{width:200px;height:200px;border-color:red;}
+#li2{width:200px;height:150px;border-color:green;margin-left:-20px;}
+#li3{width:200px;height:100px;border-color:blue;margin-left:-20px;}
+</style>-->
+<!--<style>
+*{border:1px solid #eee;}
+body{
+border-color:#09f;
+}
+ul{list-style:none;width:800px;height:600px;margin:0 auto;}
+li{position:relative;}
+#li1{width:200px;height:200px;border-color:red;top:10px;}
+#li2{width:200px;height:150px;border-color:green;top:-192px;left:180px;}
+#li3{width:200px;height:100px;border-color:blue;top:-344px;left:360px;}
+</style>-->
+<style>
+    *{border:1px solid #eee;}
+    body{
+        border-color:#09f;
+    }
+    ul{list-style:none;width:800px;height:600px;margin:0 auto;padding:20px;}
+    /*#li1{width:200px;height:200px;border-color:red;position:relative;}*/
+    /*#li2{width:200px;height:150px;border-color:green;float:left;margin-left:-20px;margin-top:-202px;}*/
+    /*#li3{width:200px;height:100px;border-color:blue;float:left;margin-left:20px;margin-top:-202px;}*/
+    #li1{
+        width: 200px;
+        height: 200px;
+        border-color: red;
+        position: relative;
+        top:-20px;
+    }
+    #li2{
+        float: left;
+        width: 200px;
+        height: 150px;
+        border-color: yellowgreen;
+        /*向左移*/
+        margin-left: -20px;
+        /*向右移*/
+        margin-top: -202px;
+    }
+    #li3{
+        float: left;
+        width: 200px;
+        height: 100px;
+        border-color: black;
+        /*向左移*/
+        margin-left: 20px;
+        /*向上移*/
+        margin-top: -202px;
+    }
+    /*这个例子告诉我们Position会保留原来的位置，而float会清除原来的位置，移动就是以新的位置来做标准*/
+</style>
+<ul >
+    <li id=li1>li1</li>
+    <li id=li2>li2</li>
+    <li id=li3>li3</li>
+</ul>
