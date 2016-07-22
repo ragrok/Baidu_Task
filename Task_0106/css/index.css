@@ -144,16 +144,28 @@ hr{
 }
 .what, .when, .how{
    height: 28px;
-   font-family: "sans-serif";
-   font-size: 32px;
-   color: #3355D0;
+   font-family: "微软雅黑";
+   font-size: 25px;
+   text-decoration: underline;
+   font-style: inherit;
    margin-bottom: 20px;
 }
+.what{
+  color: #418c59;
+}
+.when{
+  color: #d2994f;
+}
+.how{
+  color: #cc7680;
+}
+
 .bottom{
   display: inline-block;
+  margin: 25px;
 }
 .left_bottom{
-  width: 450px;
+  width: 415px;
   float: left;
   position: relative;
   margin: 10px;
@@ -162,15 +174,37 @@ hr{
   float: right;
   position: relative;
   margin: 10px;
-  width: 450px;
+  width: 440px;
+}
+.the, .tech, .tech_1{
+  font-family: "黑体";
+  font-weight: bold;
+}
+.the{
+  font-size: 72px;
+  color: #f5e327;
+  font-style: oblique;
+}
+.tech{
+  line-height: 16px;
+  font-size: 42px;
+  color: #11456b;
+}
+.tech_1{
+  display: block;
+  font-size:33px;
+  color:#11456b;
 }
 .bottom_img img{
-
-  width: 458px;
-  height: 275px;
+  width: 450px;
+  height: 270px;
+}
+.left_content{
+  clear: left;
 }
 .left_content img{
   width: 60px;
   height: 150px;
-  margin: 10px;
+  float: right;
+  margin: 12px 0 12px 0;
 }
