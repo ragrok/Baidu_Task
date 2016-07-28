@@ -282,10 +282,11 @@ li>span{
     width: 458px;
     height: 275px;
 }
-span.right_bottom_top_span{
+.right_bottom_top_span{
   position: absolute;
   width: 458px;
   height: 61px;
+  left:0;
   bottom: 0;
   background: #000000;
   opacity: 0.5;
@@ -340,9 +341,45 @@ span.right_bottom_top_span{
   width: 260px;
   height: 160px;
   float: left;
+  clear: both;
   margin-left: 0;
   margin-bottom: 0;
 }
 .right_right_bt{
-  float: left;
+  position: absolute;
+  width: 190px;
+  right: 0;
+  bottom: 0;
 }
+.right_bottom_bt li span{
+    font-size: 12px;
+    color: #5a5b5b;
+    font-family: "宋体";
+    font-style: oblique;
+    text-align: right;
+    line-height: 20px;
+}
+.middle_plus{
+    float: left;
+    margin-bottom: 35px;
+    text-indent: 2em;
+    font-size: 14px;
+    color: #5a5b5b;
+    font-style: oblique;
+    line-height: 16px;
+}
+.left_plus, .right_plus{
+    position: absolute;
+    font-size: 72px;
+    color: #d45d5c;
+}
+.left_plus{
+    margin-left: -30px;
+}
+.right_plus{
+    margin-right: 0;
+    margin-bottom: -36px;
+}
+
+
+
