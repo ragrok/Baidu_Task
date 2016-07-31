@@ -1,0 +1,41 @@
+.gird_container{
+    width: 100%;
+    max-width: 1200px;
+}
+/*清浮动*/
+.row:before, .row:after{
+    /*行的前后没有额外的文字*/
+    content: none;
+    /*设定为快元素级的表格*/
+    display: table;
+    /*清除内部的浮动*/
+    clear: both;
+}
+[class*='col_']{
+    /*这是实现网格布局的关键，样式会自动设置为
+    display：inline-block，div变为了行内元素，
+    宽度不足的列会从下一行开始布局，也就变为了我们的网格布局*/
+    float: left;
+    min-height: 1px;
+    width: 16.66%;
+    /*突出间隔*/
+    padding: 12px;
+    background: #ffdcdc;
+}
+.col_1{width: 16.66%;}
+.col_2{width: 33.33%}
+.col_3{width: 50%;}
+.col_4{width: 66.66%;}
+.col_5{width: 83.33%;}
+.col_6{width: 100%;}
+.outline, .outline*{
+  outline: 1px solid #f6a1a1;
+}
+/*额外的列样式*/
+[class='col_'] > p{
+   background: #ffc2c2;
+   padding: 0;
+    margin: 0;
+    text-align: center;
+    color: white;
+}

@@ -1,0 +1,69 @@
+.grid_container{
+    width: 100%;
+    max-width: 1200px;
+}
+
+/*清除浮动*/
+.row:before, .row:after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+[class*='col_']{
+    float: left;
+    min-height: 1px;
+    width: 16.66%;
+    /*设置间隔*/
+    padding: 12px;
+    background: blue;
+}
+
+.col_1{width: 16.66%;}
+.col_2{width: 33.33%;}
+.col_3{width: 50%;}
+.col_4{width: 66.66%;}
+.col_5{width: 83.33%;}
+.col_6{width: 100%;}
+
+.outline, .outline*{
+  outline: 1px solid #d45d5c;
+}
+
+/*其他的列*/
+[class*='col_'] > p{
+    background: yellow;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    color: white;
+}
+
+/*不同的屏幕列显示不同的宽度*/
+/*800px*/
+@media all and (max-width: 800px) {
+    .col_1{width: 33.33%;}
+    .col_2{width: 50%;}
+    .col_3{width: 83.33%;}
+    .col_4{width: 100%;}
+    .col_5{width: 100%;}
+    .col_6{width: 100%;}
+
+    .row .col_2:last-of-type{
+       width: 100%;
+    }
+    .row  .row_5 ~ .col_1{
+        width: 100%;
+    }
+}
+
+
+/*650px*/
+@media all and(max-width: 650px){
+      .col_1{width: 50%;}
+      .col_2{width: 100%;}
+      .col_3{width: 100%;}
+      .col_4{width: 100%;}
+      .col_5{width: 100%;}
+      .col_6{width: 100%;}
+}
