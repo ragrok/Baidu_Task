@@ -1,0 +1,69 @@
+/*基础布局*/
+html, body{
+  margin: 0;
+  padding: 0;
+}
+.grid_container{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #999;
+}
+.grid_container:before, .grid_container:after{
+    content: '';
+    display: table;
+    clear: both;
+}
+.outer{
+    box-sizing: border-box;
+    float: left;
+    padding:  10px;
+}
+.inner{
+    height: 50px;
+    background: #eee;
+    border: 1px solid #999;
+}
+
+
+/*不同的屏幕显示不同的宽度*/
+/*大于768px*/
+@media all and (min-width:769px){
+    .col_md_1{
+        width: 8.33333%;
+    }
+    .col_md_2{
+        width: 16.66667%;
+    }
+    .col_md_3{
+        width: 25%;
+    }
+    .col_md_4{
+        width: 33.33333%;
+    }
+    .col_md_6{
+        width: 50%;
+    }
+}
+
+/*最大为768时*/
+@media all and (max-width:768px ){
+    .col_sm_1{
+        width: 8.33333%;
+    }
+    .col_sm_2{
+        width: 16.66667%;
+    }
+    .col_sm_3{
+        width: 25%;
+    }
+    .col_sm_6{
+        width: 50%;
+    }
+    .col_sm_8{
+        width: 66.6667%;
+    }
+    .col_sm_12{
+        width: 100%;
+    }
+}
