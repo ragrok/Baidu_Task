@@ -1,0 +1,76 @@
+/*定义变量*/
+@box-sizing: border-box;
+@border: 1px solid #999;
+@col_width: 8.333333333%;
+@padding_width: 10px;
+@min-width: 769px;
+@max-width: 768px;
+@md_screen: ~"all and (min-width: @{min-width})";
+@sm_screen: ~"all and (max-width: @{max-width})";
+/*基础布局*/
+html, body{
+  margin: 0;
+  padding: 0;
+}
+.grid_container{
+  box-sizing: @box-sizing;
+  width: @col_width * 12;
+  padding: @padding_width;
+}
+.grid_container:before, .grid_container:after{
+  content: '';
+  display: table;
+  clear: both;
+}
+.outer{
+  box-sizing: @box-sizing;
+  float: left;
+  padding:  @padding_width;
+}
+.inner{
+  height: @padding_width * 5;
+  background: #eee;
+  border: @border;
+}
+
+/*不同的屏幕显示不同的宽度*/
+/*大于768px*/
+@media @md_screen{
+  .col_md_1{
+    width: @col_width;
+  }
+  .col_md_2{
+    width: @col_width * 2;
+  }
+  .col_md_3{
+    width: @col_width * 3;
+  }
+  .col_md_4{
+    width: @col_width * 4;
+  }
+  .col_md_6{
+    width: @col_width * 6;
+  }
+}
+
+/*最大为768时*/
+@media @sm_screen{
+  .col_sm_1{
+    width: @col_width;
+  }
+  .col_sm_2{
+    width: @col_width * 2;
+  }
+  .col_sm_3{
+    width: @col_width * 3;
+  }
+  .col_sm_6{
+    width: @col_width * 6;
+  }
+  .col_sm_8{
+    width: @col_width * 8;
+  }
+  .col_sm_12{
+    width: @col_width * 12;
+  }
+}
