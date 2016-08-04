@@ -16,7 +16,7 @@
     width: 16.66%;
     /*设置间隔*/
     padding: 12px;
-    background: blue;
+    background: gray;
 }
 
 .col_1{width: 16.66%;}
@@ -28,6 +28,7 @@
 
 .outline, .outline*{
   outline: 1px solid #d45d5c;
+    color: darkorange;
 }
 
 /*其他的列*/

@@ -1,0 +1,62 @@
+html body{
+    margin: 0;
+    padding: 20px;
+}
+
+.container{
+    display: flex;
+    flex-flow: wrap row;
+}
+
+.outer{
+    width: 120px;
+    padding: 20px;
+    border: solid 1px #f00;
+}
+
+.div_1{
+    height: 120px;
+}
+
+.div_2{
+    height: 100px;
+}
+
+.div_3{
+    height: 40px;
+}
+
+.div_4{
+    height: 200px;
+    border-color: #0f0;
+}
+
+
+/*当屏幕宽度大于640px时*/
+@media all and (min-width: 641px){
+    /*侧洲居中，主轴前后对齐侧轴，中间容器居中对齐*/
+   .container{
+       align-items: center;
+       justify-content: space-between;
+   }
+   .div_4{
+       margin-top: 20px;
+   }
+
+}
+
+/*当屏幕宽度最大为640px时*/
+@media all and (max-width: 640px){
+    .container{
+       align-items: flex-start;
+       justify-content: space-between;
+    }
+
+     .div_4{
+         -webkit-order: -1;
+     }
+
+     .div_3{
+         margin-top:20px;
+     }
+}
