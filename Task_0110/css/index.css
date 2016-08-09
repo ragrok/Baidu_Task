@@ -1,17 +1,22 @@
 html body{
     margin: 0;
-    padding: 20px;
+    padding: 0px;
 }
 
 .container{
+    justify-content: space-between;
     display: flex;
     flex-flow: wrap row;
+    border: solid 1px #ccc;
+    padding: 20px;
 }
 
 .outer{
     width: 120px;
     padding: 20px;
+    box-sizing: border-box;
     border: solid 1px #f00;
+    margin-bottom: 20px;
 }
 
 .div_1{
@@ -37,26 +42,18 @@ html body{
     /*侧洲居中，主轴前后对齐侧轴，中间容器居中对齐*/
    .container{
        align-items: center;
-       justify-content: space-between;
    }
-   .div_4{
-       margin-top: 20px;
-   }
-
 }
 
 /*当屏幕宽度最大为640px时*/
 @media all and (max-width: 640px){
     .container{
        align-items: flex-start;
-       justify-content: space-between;
+
     }
 
      .div_4{
          -webkit-order: -1;
      }
 
-     .div_3{
-         margin-top:20px;
-     }
 }
