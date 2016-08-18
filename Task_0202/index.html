@@ -36,21 +36,62 @@
             return document.getElementById(id);
         }
 
-        let list = $('aqi-list');
+        //定义数组来存放数据
+        var arr = [];
 
-        function showList() {
-            for(let i = 0; i < aqiData.size; i++){
-                 if(aqiData.get(i)[1] > 60){
-              
-                 }
+        for (let letter of aqiData){
+            let i = 1;
+            if (letter[1] > 60){
+               console.log(letter);
+               arr.push(letter);
             }
         }
-        
-        function createNode(textNode,textNumber) {
-            var li = document.createElement('li');
-            var node = document.createTextNode(textNode);
+         console.log(arr);
+        //对数组进行排序
+        function compare(a,b) {
+           if (a[1] > b[1]){
+               return -1;
+           }else if (a[1] == b[1]){
+               return 0;
+           }else if (a[1] < b[1]){
+               return 1;
+           }
         }
+        arr.sort(compare);
+        console.log(arr);
+        //定义一个中文和阿拉伯数字的对应的数组
+        let number = [
+            ["一", 1],
+            ["二", 2],
+            ["三", 3],
+            ["四", 4],
+            ["五", 5],
+            ["六", 6]
+        ];
+        //二者之间比较，形成一个新的数组
+        function replaceNumber(a) {
+            let i = 1;
+            for(let n of number){
+                console.log("数组里面:"+a[1]);
+                console.log("数组里面"+n[1]);
+                if (n[1] == i){
+                    return '第'+n[0]+'名:'+a[0]+','+a[1];
+                    i ++;
+                }
+             }
+        }
+       let arr2  = arr.map(replaceNumber);
+        console.log(arr2);
+          //写入li标签
+        arr2.forEach(function (arr_number) {
+            let li = document.createElement("li");
+            let node_document = document.createTextNode(arr_number);
+            li.appendChild(node_document);
+            $('aqi-list').appendChild(li);
+        })
+
     })();
+
 
 </script>
 </body>
