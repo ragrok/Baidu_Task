@@ -29,26 +29,53 @@
 
 <script type="text/javascript">
 
-    var $ = function (id) {
-        return document.getElementById(id);
-    }
     /**
      * getData方法
      * 读取id为source的列表，获取其中城市名字及城市对应的空气质量
      * 返回一个数组，格式见函数中示例
      */
-    function getData() {
-        let data = [];
-        let  source = $('source');
 
-        let li = source.childElementCount;
-        let li1 = source.childNodes[0].innerHTML;
-        console.log(li);
-        console.log("--------"+li1);
-        for (let s1 = 0 ; s1 <= li1.length; s1++){
-            console.log(li1[s1]);
+    /*定义全局拿到id*/
+     
+    var $ = function (id) {
+        return document.getElementById(id);
+    }
+
+    function getData() {
+        /*
+         coding here
+         */
+        let source  = $('source');
+        let data = [];
+        //拿到ul标签下所有的子节点
+        let source_child = source.children;
+        //处理li节点的文本数据
+        let source_child_text = null;
+        let source_child_text_length = null;
+        for (let i = 0; i < source_child.length;i++){
+            let text_first = null;
+            let text_second = null;
+            let data_child = [];
+             //截取我们需要的数据
+             source_child_text = source_child[i].innerText;
+             source_child_text_length = source_child[i].innerText.length;
+             text_first = source_child_text.substr(0,2);
+             text_second = source_child_text.substr(source_child_text_length-2,source_child_text_length-1);
+             //转成数字
+             text_second = parseInt(text_second);
+             data_child.push(text_first);
+             data_child.push(text_second);
+             data.push(data_child);
         }
 
+        /*
+         data = [
+         ["北京", 90],
+         ["北京", 90]
+         ……
+         ]
+         */
+        console.log('转换后的data数据:'+data);
         return data;
 
     }
@@ -59,7 +86,13 @@
      * 返回一个排序后的数组
      */
     function sortAqiData(data) {
-
+        //定义排序的函数
+        let sort = function (a,b) {
+             return a[1] - b[1];
+        }
+        data.sort(sort);
+        console.log('排序后的data：'+data);
+        return data;
     }
 
     /**
@@ -68,11 +101,26 @@
      * 格式见ul中的注释的部分
      */
     function render(data) {
+        let arr = ['七', '六','五','四','三','二','一'];
+        let list = $('resort');
+        for(let i= data.length-1; i >= 0; i--){
+                //append
+                let b_node = document.createElement('b');
+                let b_text = document.createTextNode(data[i][1]);
+                b_node.appendChild(b_text);
+                let li_node = document.createElement('li');
+                let li_text = '第'+arr[i]+'名：'+data[i][0]+'空气质量：';
+                li_node.innerHTML = li_text;
+                li_node.appendChild(b_node);
+                list.appendChild(li_node);
 
+        }
+
+        console.log(list);
     }
 
     function btnHandle() {
-        var aqiData = getData();
+        let aqiData = getData();
         aqiData = sortAqiData(aqiData);
         render(aqiData);
     }
@@ -81,11 +129,15 @@
     function init() {
 
         // 在这下面给sort-btn绑定一个点击事件，点击时触发btnHandle函数
-
+        let sort_btn = $('sort-btn');
+        sort_btn.onclick = function () {
+            console.log('come in');
+            btnHandle();
+        }
     }
 
     init();
-    getData();
+
 </script>
 </body>
 </html>
