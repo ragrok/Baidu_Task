@@ -23,6 +23,7 @@ var aqi_table = $('aqi-table');
 function addAqiData() {
 
     let city_value = city_input.value.trim();
+    console.log(city_value);
     let air_value = value_input.value.trim();
      //验证中文
     if (!/[a-zA-Z\u4e00-\u9fa5]/.test(city_value)) {
@@ -42,10 +43,20 @@ function addAqiData() {
  * 渲染aqi-table表格
  */
 function renderAqiList() {
-    console.log(aqiData[city_input.value.trim()]);
-    console.log(aqiData.keys());
-    console.log(aqiData.values());
-    console.log(aqiData.entries());
+    aqi_table.innerHTML = '<tr>' +
+        '<td>城市</td><td>空气质量</td><td>操作</td>' +
+        '</tr>';
+
+    for(let i in aqiData){
+        console.log(typeof  i);
+        let tr_node = document.createElement('tr');
+         tr_node.innerHTML = '<td>'+i+'</td>' +
+             '<td>'+aqiData[i]+'</td>' +
+             '<td><button>删除</button></td>';
+        aqi_table.appendChild(tr_node);
+        console.log(tr_node.childElementCount);
+    }
+
 }
 
 /**

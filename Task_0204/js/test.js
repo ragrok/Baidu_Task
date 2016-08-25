@@ -60,5 +60,24 @@ var fun4 = function () {
     高优先权，返回了传入的20而不是外部函数的变量值10。*/
 };
 
-fun4();
+//arguments 函数
+function myConcat(separator) {
+    var result = "", // initialize list
+        i;
+    // iterate through arguments
+    for (i = 1; i < arguments.length; i++) {
+        result += arguments[i] + separator;
+        console.log(arguments[i]);
+    }
+    return result;
+}
+
+// returns "red, orange, blue, "
+myConcat(", ", "red", "orange", "blue");
+
+// returns "elephant; giraffe; lion; cheetah; "
+myConcat("; ", "elephant", "giraffe", "lion", "cheetah");
+
+// returns "sage. basil. oregano. pepper. parsley. "
+myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");
 
