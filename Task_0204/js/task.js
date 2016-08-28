@@ -43,20 +43,15 @@ function addAqiData() {
  * 渲染aqi-table表格
  */
 function renderAqiList() {
-    aqi_table.innerHTML = '<tr>' +
+    let items = '<tr>' +
         '<td>城市</td><td>空气质量</td><td>操作</td>' +
         '</tr>';
-
-    for(let i in aqiData){
-        console.log(typeof  i);
-        let tr_node = document.createElement('tr');
-         tr_node.innerHTML = '<td>'+i+'</td>' +
-             '<td>'+aqiData[i]+'</td>' +
-             '<td><button>删除</button></td>';
-        aqi_table.appendChild(tr_node);
-        console.log(tr_node.childElementCount);
-    }
-
+        for (var i in aqiData) {
+            items += '</tr><td>' + i + '</td>' +
+                '<td>' + aqiData[i] + '</td>' +
+                '<td><button>删除</button></td></tr>';
+        }
+    aqi_table.innerHTML = i ? items : "";
 }
 
 /**
@@ -72,21 +67,31 @@ function addBtnHandle() {
  * 点击各个删除按钮的时候的处理逻辑
  * 获取哪个城市数据被删，删除数据，更新表格显示
  */
-function delBtnHandle() {
+function delBtnHandle(target) {
     // do sth.
-
+    let city_name = target.parentNode.parentNode.firstChild.innerHTML;
+    delete aqiData[city_name];
+    console.log('aqidate的值：'+aqiData);
     renderAqiList();
+    console.log('finish');
 }
 
 function init() {
 
     // 在这下面给add-btn绑定一个点击事件，点击时触发addBtnHandle函数
     $('add-btn').onclick = function () {
-        addAqiData();
-        renderAqiList();
-    }
+        addBtnHandle();
+    };
 
     // 想办法给aqi-table中的所有删除按钮绑定事件，触发delBtnHandle函数
+    aqi_table.addEventListener('click',function (e) {
+         //匹配button
+         if (e.target.nodeName.toUpperCase() === 'BUTTON'){
+             //调用处理方法
+             delBtnHandle(e.target);
+         }
+
+     });
 }
 
 init();
