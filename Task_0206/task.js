@@ -20,18 +20,21 @@ var add_button_event = function () {
 
 var reg = function (reg_text) {
     let reg = /[0-9]{1,}/;
-    return reg_text ? reg.test(reg_text) : '';
-}
+    if(reg.test(reg_text) == false){
+        alert('请输入数字');
+        return;
+    }else {
+        return reg_text ? reg.test(reg_text) : '';
+    }
+
+};
 
 //根据不同的button类型处理数据
 var handler_data_event = function (target) {
     console.log('come in handler_data_event');
-    console.log(target);
     //得到值和点击的button
     let input_text = $('task_input').value;
-    console.log(input_text);
     let input_button = target.innerText;
-    console.log(input_button);
     //验证是否是数字，其实可以使用isNaN来验证
     if (reg(input_text) &&　(input_text != null || input_text != '')) {
         //匹配button的类型,做不同的数据处理
@@ -68,7 +71,6 @@ var hander_data = function () {
         for(let i = 0; i < data.length;i++){
            show_text_1 += '<span style="font-size: 50px;margin: 10px;background: red;">'+data[i]+'</span>';
         }
-        console.log('show_text_1:'+show_text_1);
     }
     show_text.innerHTML = data ? show_text_1 : '';
     console.log('finish');
@@ -76,7 +78,6 @@ var hander_data = function () {
 //为div show_text设定代理事件
 var add_text_event = function () {
    show_text.addEventListener('click',function (event) {
-       console.log(event.target);
        if (event.target.hasChildNodes('span')){
            click_list_hander(event.target);
        }
